@@ -1,6 +1,10 @@
 package ua.lviv.iot.algo.part1.lab1;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -28,10 +32,13 @@ public class Zoo {
                 getInstance(),
                 getInstance()
         };
-        int i = 0;
+       /* int i = 0;
         while (i < zoos.length) {
             System.out.println(zoos[i]);
             i++;
+        }*/
+        for (Zoo Zoo:zoos){
+            System.out.println(Zoo);
         }
     }
 
