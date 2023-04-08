@@ -1,10 +1,9 @@
 package ua.lviv.iot.algo.part1.lab1;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.stream.Collectors;
 
-public class AnimalHomeManager
-{
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+public class AnimalHomeManager {
     public void addZoo(final Zoo zoo) {
 
     }
@@ -16,7 +15,7 @@ public class AnimalHomeManager
     }
 
 
-    public List<Zoo> findPlaceWithWorkingHoursLessThan(List<Zoo> zooList) {
+    public List<Zoo> findPlaceWithWorkingHoursLessThanNine(List<Zoo> zooList) {
         return zooList.stream()
                 .filter(zoo -> zoo.getWorkingHours() <= 9)
                 .collect(Collectors.toList());

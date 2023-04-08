@@ -12,15 +12,14 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class AnimalShelter extends AbstractAnimalHome
-{
-    private int capacity;
-    private int workingHours;
-    private double animalCarryCost;
+    public class AnimalShelter extends AbstractAnimalHome {
+        private int capacity;
+        private int workingHours;
+        private double animalCarryCost;
 
-    @Override
-    public double calculateCostPerMonth()
-    {
-        return 0;
+        @Override
+        public double calculateCostPerMonth()
+        {
+            return 0;
+        }
     }
-}

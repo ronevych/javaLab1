@@ -10,14 +10,13 @@ import lombok.ToString;
 @Setter
 @ToString(of = {"animalType", "dailyFoodCost"})
 
-public class Farm extends AbstractAnimalHome
-{
+public class Farm extends AbstractAnimalHome {
     private String animalType;
     private double dailyFoodCost;
 
 
     @Override
     public double calculateCostPerMonth() {
-        return 0;
+        return dailyFoodCost * 30;
     }
 }
