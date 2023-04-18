@@ -15,6 +15,12 @@ public abstract class AbstractAnimalHome {
     public double zooArea;
 
     public abstract double calculateCostPerMonth();
+    public String getHeaders (){
+        return "name, location, zooArea";
+    }
+    public String toCSV(){
+        return String.format("%s, %s, %f", name, location, zooArea);
+    }
 
 }
 

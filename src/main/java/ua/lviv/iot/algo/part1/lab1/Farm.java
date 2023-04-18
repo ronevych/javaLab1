@@ -19,4 +19,14 @@ public class Farm extends AbstractAnimalHome {
     public double calculateCostPerMonth() {
         return dailyFoodCost * 30;
     }
+
+    @Override
+    public String getHeaders(){
+        return super.getHeaders() + ", animalType, dailyFoodCost";
+    }
+
+    @Override
+    public String toCSV(){
+        return String.format("%s, %s, %f", super.toCSV(), animalType, dailyFoodCost);
+    }
 }

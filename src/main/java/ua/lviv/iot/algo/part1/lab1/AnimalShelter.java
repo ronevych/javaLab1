@@ -12,14 +12,23 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 
-    public class AnimalShelter extends AbstractAnimalHome {
-        private int capacity;
-        private int workingHours;
-        private double animalCarryCost;
+public class AnimalShelter extends AbstractAnimalHome {
+    private int capacity;
+    private int workingHours;
+    private double animalCarryCost;
 
-        @Override
-        public double calculateCostPerMonth()
-        {
-            return 0;
-        }
+    @Override
+    public double calculateCostPerMonth() {
+        return 0;
     }
+
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", capacity, workingHours, animalCarryCost";
+    }
+
+    @Override
+    public String toCSV() {
+        return String.format("%s, %d, %d, %f", super.toCSV(), capacity, workingHours, animalCarryCost);
+    }
+}

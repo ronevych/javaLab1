@@ -3,7 +3,9 @@ package ua.lviv.iot.algo.part1.lab1;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-public class AnimalHomeManager {
+public class AnimalHomeManager  {
+
+    private List<Zoo> zoos = new ArrayList<>();
     public void addZoo(final Zoo zoo) {
 
     }

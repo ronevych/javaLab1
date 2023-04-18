@@ -21,6 +21,12 @@ public class Aquarium extends AbstractAnimalHome
     @Override
     public double calculateCostPerMonth()
     {
-        return 0;
+        return animalCarryCost * 30;
+    }
+    public String getHeaders(){
+        return super.getHeaders() + ", capacity, workingHours, animalCarryCost";
+    }
+    public String toCSV(){
+        return  String.format("%s, %d, %d, %f", super.toCSV(), capacity, workingHours, animalCarryCost);
     }
 }
